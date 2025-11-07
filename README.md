@@ -5,6 +5,9 @@
 ## What is this?
 `genzolars` is a tiny shim that patches Polars the moment you import it (or run the `genzolars` console script). Every row op, column select, join, or group-by suddenly speaks fluent Gen Z, and you can even `import genzolars as pl` to access the full Polars surface straight from this package.
 
+This was definitely inspired from [`genzplyr`](https://github.com/hadley/genzplyr).
+
+
 ## Installation
 ### Direct from GitHub
 Add to a uv project:
