@@ -50,8 +50,5 @@ jobs:
       shell: bash
       run: |
         uv run --dev pytest \
-          --cov=genzolars \
-          --cov-report=xml:coverage.xml \
-          --cov-report=term-missing \
           --verbose \
           tests/
