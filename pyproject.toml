@@ -1,0 +1,37 @@
+[project]
+name = "genzolars"
+version = "0.1.0"
+description = "polars but make it bussin fr fr no cap"
+readme = "README.md"
+authors = [
+    { name = "William Fondrie", email = "fondriew@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "polars>=1.35.1",
+]
+
+[project.scripts]
+genzolars = "genzolars:main"
+
+[build-system]
+requires = ["uv_build>=0.8.3,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "ruff>=0.14.4",
+]
+
+[tool.ruff]
+line-length = 79
+target-version = "py312"
+
+[tool.ruff.lint]
+# D213 Multi-line docstring summary should start at the second lin
+# D203 1 blank line required before class docstring
+# D100 Missing docstring in public module
+# D401 First line of docstring should be in imperative mood
+ignore = ["D213", "D203", "D100", "D401"]
+select = ["E", "F", "W", "C", "I", "D", "UP", "N", "T20"]
