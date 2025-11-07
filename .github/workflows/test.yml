@@ -7,7 +7,29 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version-file: pyproject.toml
+
+    - uses: pre-commit/action@v3.0.1
+      with:
+        extra_args: --all-files
+
+    - name: Check Linting
+      uses: astral-sh/ruff-action@v3
+
+    - name: Check Formatting
+      uses: astral-sh/ruff-action@v3
+      with:
+        args: format --check --diff
+
+  test:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
