@@ -139,12 +139,12 @@ Because data tooling should be fun. Toss some `yeet()`s into your notebooks, get
 - **Clout** – social status / attention
 
 ## Contributing
-Pull requests, new slang ideas, and docs edits are all welcome. Please run:
+Pull requests, new slang ideas, and docs edits are all welcome.
+Fork the repo, install pre-commit and the pre-commit hooks with:
 ```bash
-uv run pytest
-uv run ruff check .
+pre-commit install
 ```
-before pushing so CI stays chill.
+before committing so CI stays chill.
 
 ## License
 MIT – remix however you want, just keep it fun.
