@@ -116,11 +116,6 @@ synced = (
 print(synced)
 ```
 
-### CLI vibes
-```bash
-uv run python -m genzolars
-# -> GenZ polars aliases loaded. Import polars and cook.
-```
 ## Why tho?
 Because data tooling should be fun. Toss some `yeet()`s into your notebooks, get a laugh in code review, and still ship legit Polars pipelines. Inspired by the `genzplyr` R package’s energy, but now for Pythonic dataframes.
 
